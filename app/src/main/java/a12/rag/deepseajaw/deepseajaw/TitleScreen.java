@@ -70,7 +70,7 @@ public class TitleScreen implements GLSurfaceView.Renderer {
 
         this.lockjaw = new GLImage(gl, this.context);
         this.lockjaw.setImage(R.drawable.lockjaw_sprite_chart);
-        this.lockjaw.setFrames(4,2,8);
+        this.lockjaw.setFrames(4,3,8);
         this.lockjaw.setAlign(GLImage.ALIGN_CENTER);
         this.lockjaw.setAngle(180);
         this.lockjaw.setSize(width/prop/2f);

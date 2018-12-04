@@ -52,6 +52,7 @@ public class GLImage {
     private int relaction;
     private int[] start_position;
     private boolean visible = true;
+    private float frame_pos;
 
     public GLImage(GL10 openGL, Context context){
 
@@ -97,7 +98,7 @@ public class GLImage {
 
         this.relaction = -1;
 
-
+        this.setFrame_pos(1);
 
     }
 
@@ -687,6 +688,14 @@ public class GLImage {
 
     public void setStart_position(int[] start_position) {
         this.start_position = start_position;
+    }
+
+    public float getFrame_pos() {
+        return frame_pos;
+    }
+
+    public void setFrame_pos(float frame_pos) {
+        this.frame_pos = frame_pos;
     }
 }
 

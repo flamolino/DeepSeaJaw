@@ -30,6 +30,8 @@ public class MainActivity extends Activity {
         this.lay_title_screen_bg.addView(this.superficie_title);
         this.started = false;
 
+        Utilities.emitirSom(R.raw.music_fundo, this);
+
     }
 
     @Override
@@ -49,12 +51,16 @@ public class MainActivity extends Activity {
                         this.lay_title_screen_bg.addView(this.superficie_game);
 
                         this.started = true;
-                    }
+                }
 
                 break;
 
             default:
                 break;
+        }
+
+        if(started){
+            this.animacao_game.touch(event);
         }
 
         return super.onTouchEvent(event);
